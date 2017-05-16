@@ -1,0 +1,168 @@
+/* ==================
+ *  TOOLTIP ELEMENTS
+ * ================== */
+
+/* --- Default iframe style --- */
+.tooltip iframe {
+    margin: 0 !important;
+    width: 98% !important;
+    height: 300px;
+}
+/* --- Tooltip container --- */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+/* --- Tooltip text --- */
+.tooltip .tooltiptext {
+    font-size: 0.7em;
+    font-weight: normal;
+    visibility: hidden;
+    width: 200px;
+    background-color: rgba(0,0,0,0.9);
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+.tright {
+    top: -1em;
+    left: 150%;
+}
+.tleft {
+    top: -1em;
+    right: 150%;
+}
+.ttop {
+    bottom: 120%;
+    left: 50%;
+    margin-left: -100px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+.tbottom {
+    top: 150%;
+    left: 50%;
+    margin-left: -100px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+.tright::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent rgba(0,0,0,0.9) transparent transparent;
+}
+.tleft::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%; /* To the right of the tooltip */
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgba(0,0,0,0.9);
+}
+.ttop::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.9) transparent transparent transparent;
+}
+.tbottom::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0,0,0,0.9) transparent;
+}
+/* --- Show the tooltip text when you mouse over the tooltip container --- */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+/* ====================
+ *  TOOLTIP ANIMATIONS
+ * ==================== */
+/* --- FADE --- */
+.tooltip-anim-fade .tooltiptext {
+    opacity: 0;
+    transition: opacity 1s;
+}
+.tooltip-anim-fade:hover .tooltiptext {
+    opacity: 1;
+}
+/* --- SHAKE --- */
+.tooltip-anim-shake:hover .tooltiptext {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+@keyframes shake {
+    10%, 90% {transform: translate3d(-2px, 0, 0);}
+    20%, 80% {transform: translate3d(5px, 0, 0);}
+    30%, 50%, 70% {transform: translate3d(-8px, 0, 0);}
+    40%, 60% {transform: translate3d(8px, 0, 0);}
+}
+
+
+/* ========================================
+ *  CUSTOM CSS CLASS EXAMPLES FOR TOOLTIPS
+ * ======================================== */
+.green > .tooltiptext {
+    font-size: 0.5em;
+    background-color: rgba(26, 129, 8, 0.9);
+    color: #fff;
+    text-align: left;
+    padding: 1em;
+    border-radius: 15px;
+}
+.green > .tright::after {
+    border-color: transparent rgba(26, 129, 8, 0.9) transparent transparent;
+}
+.green > .tleft::after {
+    border-color: transparent transparent transparent rgba(26, 129, 8, 0.9);
+}
+.green > .ttop::after {
+    border-color: rgba(26, 129, 8, 0.9) transparent transparent transparent;
+}
+.green > .tbottom::after {
+    border-color: transparent transparent rgba(26, 129, 8, 0.9) transparent;
+}
+
+.blue {
+    color: rgb(0, 95, 129);
+}
+.blue > .tooltiptext {
+    background-color: rgba(0, 95, 129, 0.9);
+    color: #fff;
+    text-align: right;
+    padding: 1em 1.5em 1em 1em;
+    border-radius: 15px;
+}
+.blue > .tright::after {
+    border-color: transparent rgba(0, 95, 129, 0.9) transparent transparent;
+}
+.blue > .tleft::after {
+    border-color: transparent transparent transparent rgba(0, 95, 129, 0.9);
+}
+.blue > .ttop::after {
+    border-color: rgba(0, 95, 129, 0.9) transparent transparent transparent;
+}
+.blue > .tbottom::after {
+    border-color: transparent transparent rgba(0, 95, 129, 0.9) transparent;
+}

@@ -1,0 +1,39 @@
+{
+  "name": "jquery-tooltip-basic",
+  "title": "jQuery Tooltip Basic",
+  "description": "A basic tooltip plugin for jQuery",
+  "version": "1.0.0",
+  "main": "src/jquery.tooltip.basic.js",
+  "homepage": "https://github.com/pemre/jquery-tooltip-basic",
+  "author": {
+    "name": "Emre Piskin",
+    "url": "http://rencs.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pemre/jquery-tooltip-basic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pemre/jquery-tooltip-basic/issues"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery",
+    "jquery",
+    "tooltip",
+    "javascript"
+],
+  "dependencies": {
+    "jquery": ">=1.12.4 <4.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^2.1.2"
+  },
+  "scripts": {
+    "prepare": "gulp"
+  }
+}

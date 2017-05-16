@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="jQuery Tooltip Basic plugin demo page">
+  <meta name="author" content="Emre Pişkin">
+  <title>jQuery Tooltip Basic plugin demo by Emre Pişkin</title>
+
+  <!-- Basic CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Our CSS file for the plugin -->
+  <link rel="stylesheet" type="text/css" href="../css/jquery.tooltip.basic.min.css">
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Our plugin: jQuery Tooltip Basic plugin by Emre Pişkin -->
+  <script type="text/javascript" src="../src/jquery.tooltip.basic.min.js"></script>
+
+  <script type="text/javascript">
+
+    /* ================
+     *  DEMO FUNCTIONS
+     * ================ */
+
+    function calculateHeight() {
+        return "Window height: <b>" + $(window).height()
+            + "</b>px<br> Resize the window without refreshing, so that you can measure the actual height. "
+            + "This javascript function works 'on hover'.";
+    }
+
+    function getTime() {
+        var dt = new Date();
+        var time = dt.getHours() + ":"
+            + (dt.getMinutes() < 10 ? '0' : '') + dt.getMinutes() + ":"
+            + (dt.getSeconds() < 10 ? '0' : '') + dt.getSeconds();
+        return "Time: <b>" + time
+            + "</b><br> This time data doesn't change because 'functionOnce' option was used.";
+    }
+
+    $(document).ready(function () {
+
+      /* ===============
+       *  DEMO EXAMPLES
+       * =============== */
+
+        $("#first").tooltip({
+            value: '<b>Tohumdan</b> yetiştirilip başka yerlere dikilmek için hazırlanan sebze veya körpe çiçek.'
+        });
+        $("#second").tooltip({
+            value: 'Kök, kara hayatına uymuş olan gelişmiş bitkilerde, genel olarak toprak içerisine doğru büyüyen ama nadiren toprak üstünde de bulunan bir organdır.',
+            class: 'green',
+            position: 'bottom',
+            width: '300px'
+        });
+        $("#third").tooltip({
+            value: 'Ağaçların gövdelerinde mevsimlere göre oluşan şekil. Bir ağacın halkaları sayılarak yaşı bulunabilir. Mobilyacılıkta, yaş halkaları dar olan ağaçlar daha üstün tutulur.',
+            class: 'blue',
+            position: 'left',
+            animation: 'fade'
+        });
+        $("#fourth").tooltip({
+            value: 'http://tr.m.wikipedia.org/wiki/Kabuk',
+            type: 'url',
+            position: 'top',
+            animation: 'fade',
+            width: '500px'
+        });
+        $("#fifth").tooltip({
+            value: 'Hücre ya da öz, bir canlının yapısal ve işlevsel özellikler gösterebilen en küçük birimidir. Hücre, Latince küçük odacık anlamına gelen "cellula" kelimesinden Robert Hooke tarafından türetilmiştir.',
+            position: 'top',
+            animation: 'shake',
+            width: '400px'
+        });
+        $("#sixth").tooltip({
+            value: '#description',
+            type: 'selector',
+            width: '400px'
+        });
+        $("#seventh").tooltip({
+            value: 'calculateHeight',
+            type: 'function',
+            position: 'top',
+            width: '380px'
+        });
+        $("#eighth").tooltip({
+            value: 'getTime',
+            type: 'functionOnce',
+            position: 'top',
+            width: '380px'
+        });
+    });
+  </script>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-12"><img src="img/tree.png" width="363" align="right" alt="Tree">
+      <small>jQuery Tooltip Basic plugin demo by Emre Piskin. <a href="https://github.com/pemre/jquery-tooltip-basic"
+                                                              target="_blank">Go to the plugin page</a></small>
+      <h1>Ağaç</h1>
+      <p>
+        Toprağa düşen tohumdan en önce <span id="first">fide</span> meydana gelir. Fide bir yıl sonra fidan hâlini alır.
+        Hücrelerinin çoğalmasıyla dal ve yapraklar, gövde ve <span id="second">kök</span> olarak üç parçadan ibaret bir
+        ağacın küçük bir modeli olur. Her yıl ağacın dallarında ve köklerinde yeni sürgünler çıkarken, gövdede de bir
+        tane yıllık <span id="third">halka</span> meydana gelir. Bu halkalar, ağacın enine büyüyerek yaptığı odun
+        tabakasıdır. Yağışı bol yıllarda, geniş bir halka; kurak geçen yıllarda ise, ince ve küçük bir halka meydana
+        gelir. Bu halkalardan ağacın yaşı kolayca anlaşılabilir.</p>
+      <p>Gövdesinden enine kesilen bir ağaç incelenecek olursa, en dışta kabuk, sonra yıllık halkaları meydana getiren
+        hücre tabakaları ve en içte de öz kısım görülür.</p>
+      <p>Bir ağacın gerçekten canlı olan biricik kısmı, <span id="fourth">kabuğun</span> altında odunun yüzeyindeki ince
+        bir <span id="fifth">hücre</span> tabakasıdır. Buna <span id="sixth">katman</span> doku tabakası (kambiyum,
+        soymuk) denir. Bu tabaka ağacı geliştiren ve büyümesini sağlayan tabakadır. Genç bir ağaca çivi çakıldığında
+        veya ağaç bir dal verdiğinde, çivinin ve dalın yerden <span id="seventh">yüksekliği</span> hiç <span
+            id="eighth">değişmez</span>.</p>
+      <hr/>
+      <div id="description">
+        <table border="0">
+          <thead>
+          <tr>
+            <th scope='col'><b>katman </b> <br><i>isim</i></th>
+          </tr>
+          </thead>
+          <tr>
+            <td>
+              <b>1. </b><i>isim -</i> Birbiri üzerinde bulunan yassıca maddelerin her biri, tabaka
+            </td>
+          <tr>
+            <td>
+              <b>2. </b><i>jeoloji -</i> Altında veya üstünde olan kayaçlardan gözle veya fiziksel olarak
+              az çok ayrılabilen, kalınlığı 1 santimetreden az olmayan tortul kayaç birimi, tabaka
+            </td>
+          <tr>
+            <td>
+              <b>3. </b><i>toplum bilimi -</i> Bir toplum içinde makam, şöhret, meslek vb. bakımdan
+              ayrılan topluluklardan her biri, tabaka
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
