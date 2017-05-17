@@ -2,7 +2,7 @@
   "name": "jquery-tooltip-basic",
   "title": "jQuery Tooltip Basic",
   "description": "A basic tooltip plugin for jQuery",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/jquery.tooltip.basic.js",
   "homepage": "https://github.com/pemre/jquery-tooltip-basic",
   "author": {

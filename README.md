@@ -1,4 +1,7 @@
 # jQuery Tooltip Basic
+
+[![npm](https://img.shields.io/npm/v/jquery-tooltip-basic.svg?style=flat-square)](https://www.npmjs.com/package/jquery-tooltip-basic) [![npm](https://img.shields.io/npm/dt/jquery-tooltip-basic.svg?style=flat-square)](https://www.npmjs.com/package/jquery-tooltip-basic) [![npm](https://img.shields.io/npm/l/jquery-tooltip-basic.svg?style=flat-square)](https://www.npmjs.com/package/jquery-tooltip-basic)
+
 A basic tooltip plugin for jQuery
 
 ## Demo
@@ -8,7 +11,7 @@ A basic tooltip plugin for jQuery
 ### Getting Started
 * Download the latest stable release from here or install `jquery-tooltip-basic` from npm.
 ```bash
-npm install jquery-tooltip-basic
+$ npm install jquery-tooltip-basic
 ```
 * Add the JavaScript and CSS file references to your web site.
 * Select the elements you want to show tooltips for.
